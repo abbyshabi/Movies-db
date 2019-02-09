@@ -15,7 +15,8 @@
             <h3>{{ movie.title }}</h3>
 
             <p class="ratings"> <b> {{ movie.vote_average }}</b> - <i>{{ movie.vote_count}} votes </i> </p>
-           
+            <a class="ratings" href="/movie/review/new/{{movie.id}}"> Write a new review</a>
+
          </div>
     </div>
 
@@ -31,7 +32,7 @@
         {% else%}
             <h3 class="text-center">This movie has no reviews </h3>
 
-            <a class="btn btn-success btn-lg text-center ratings" href="/movie/review/new/{{movie.id}}"> Write a new review</a>
+            <a class="btn btn-success btn-lg text-center" href="/movie/review/new/{{movie.id}}"> Write a new review</a>
         {% endif %}
 
     </div>
